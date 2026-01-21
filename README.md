@@ -15,11 +15,8 @@ Change default settings:
 Open the web interface: 
 - For example: http://192.168.0.123:8080
 
-
-Have fun!
+<img src="cputemp.jpg" alt="CPUtemp-Server Web UI" width="600">
 
 
 ----------------
 (c) 2026 pixelclan.de
-
-<img src="cputemp.jpg" alt="CPUtemp-Server Web UI" width="600">
