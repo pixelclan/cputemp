@@ -21,3 +21,5 @@ Have fun!
 
 ----------------
 (c) 2026 pixelclan.de
+
+<img src="cputemp.jpg" alt="CPUtemp-Server Web UI" width="600">
