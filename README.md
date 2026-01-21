@@ -21,6 +21,3 @@ Have fun!
 
 ----------------
 (c) 2026 pixelclan.de
-
-
-
