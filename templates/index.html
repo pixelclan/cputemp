@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>{SERVER_NAME}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>{CSS}</style>
+    <script>
+        const PORT = {PORT};
+        const REFRESH = {REFRESH};
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="title">CPU-Temperatur</div>
+        <div class="temp" id="temp">--</div>
+        <hr>
+        <div class="meta" id="meta">
+            Load: --<br>
+            Uptime: --<br>
+            Disk: --<br>
+            IP: --<br>
+            Port: <span id="port">{PORT}</span><br>
+            <div class="time" id="time">--</div>
+        </div>
+        <hr>
+        <div class="footer">
+            {SERVER_NAME} <span class="version">&#91;{VERSION}&#93;</span><br>
+            <span class="copyright">&#169; {YEAR} {COPYRIGHT}</span>
+        </div>
+    </div>
+
+    <script>
+        async function updateStatus() {
+            try {
+                const res = await fetch('/status');
+                const data = await res.json();
+
+                const tempEl = document.getElementById('temp');
+                tempEl.textContent = data.TEMP;
+                tempEl.style.color = data.TEMP_COLOR;
+
+                const metaEl = document.getElementById('meta');
+                metaEl.innerHTML =
+                    `Load: ${data.LOAD}<br>` +
+                    `Uptime: ${data.UPTIME}<br>` +
+                    `Disk: ${data.DISK}<br>` +
+                    `IP: ${data.IP}<br>` +
+                    `Port: {PORT}<br>`;
+            } catch(err) {
+                console.error('Fehler beim Aktualisieren:', err);
+            }
+        }
+
+        updateStatus();
+        setInterval(updateStatus, REFRESH * 1000);
+    </script>
+</body>
+</html>
