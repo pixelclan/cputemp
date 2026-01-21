@@ -15,7 +15,7 @@ Change default settings:
 Open the web interface: 
 - For example: http://192.168.0.123:8080
 
-<img src="cputemp.jpg" alt="CPUtemp-Server Web UI" width="600">
+<img src="cputemp.jpg" alt="cputemp Web UI" width="600">
 
 
 ----------------
