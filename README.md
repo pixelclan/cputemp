@@ -1,5 +1,5 @@
-A lightweight HTTP server written in Python for displaying system information (including CPU temperature) on a Raspberry Pi.
-The information is displayed via a modern web interface with AJAX.
+A lightweight HTTP server for displaying the CPU temperature on a Raspberry Pi.
+This and more is displayed via a web interface using AJAX.
 
 ----------------
 
